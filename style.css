@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
 @font-face {
     font-family: 'latin_modern_mono8_regular';
@@ -21,20 +22,67 @@
 --wrapper-width: 75%;
 --wrapper-width-mobile: 85%;
 --body-bg: #F5F5F5;
+--header-font:  "Space Grotesk";
+/* font for the main title of the web page*/ 
+--h1-font: "Vollkorn";
 }
 
+::selection{
+    background-color: yellow;
+    color: #2c2932;
+}
+
+html, body {
+    margin: 0;
+}
 body {
     font-family: 'latin_modern_mono8_regular', serif;
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* justify-content: center; */
+    align-items: center;
 }
-
 
 
 header {
-    margin-left:auto;
-    margin-right: auto;
     width: var(--wrapper-width);
+    font-family: var(--header-font), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1rem;
+    background-color: var(--tigers-eye);
+    /* width: 100%; */
+    margin-top: 1rem;
+    font-family: var(--header-font);
+  }
+
+.footer-text {
+    margin: 0.2rem 4rem;
+    color: snow;
+}
+
+.footer-text > a{
+    color: snow;
+}
+
+a:link {
+    color: lightgray;
+}
+
+
+a:visited{
+    border: 10px solid red;
+    border-radius: 5px;
+}
+
 
 hr{
     width: var(--wrapper-width);
@@ -42,19 +90,38 @@ hr{
 }
 
 
-#wrapper{
+#essay-wrapper{
     width: var(--wrapper-width);
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     background-color: var(--body-bg);
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
 }
 
 #author {
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin: 0%;
     text-decoration: none;
+    font-weight: 600;
+    display: flex;
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #36454F;
+}
+
+.wikipedia-link{
+    color: #36454F;
+    text-decoration: none;
+    border-bottom: 1px dotted whitesmoke;
+
+}
+.first-publ {
+    font-size: 0.85rem;
 }
 
 .circle{
@@ -77,6 +144,13 @@ hr{
     /* animation: 1s infinite alternate opacity-sliding; */
 }
 
+.grossman-wikipedia{
+    text-decoration: none;
+    color: var(--walnut-brown);
+    text-shadow: 1px 3px 2px whitesmoke;
+    vertical-align: middle;
+}
+
 p {
     margin-bottom: 1rem;
     color: #2c2932;
@@ -88,29 +162,39 @@ p {
 
 h1 {
     color: #36454F	;
-    font-family: var(--lm-font);
-    font-size: 3rem;
-    font-weight: 1200;
-    font-style: bold;
+    font-size: 4.2rem;
+    font-weight: 600;
     line-height: 1.5;
+    letter-spacing: 0.5rem;
     page-break-after: avoid;
     orphans: 2;
     widows: 2;
     text-align: left;
     margin-bottom: -0.7rem;
+    font-family: var(--h1-font), serif;
+    font-optical-sizing: auto;
+    margin-top: 0.5rem;
 }
 
-h2 {
+h2, h2>a {
     color: #000000;
-    font-size: 2rem;
+    font-family: var(--header-font), sans-serif;
+    /* font-size: 2rem; */
     padding-bottom: 0.5rem;
-    font-family: var(--lm-font);
+    /* font-family: var(--lm-font); */
     line-height: 1.15;
     page-break-after: avoid;
     orphans: 2;
     widows: 2;
-    text-align: left
+    text-align: left;
+    text-decoration: none;
 }
+
+a.section-title:visited{
+    border: 10px solid red;
+    border-radius: 5px;
+}
+
 
 h3 {
     padding-top: 16pt;
@@ -184,7 +268,7 @@ h6 {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: center;
         letter-spacing: 0.1rem;
     }
@@ -193,6 +277,7 @@ h6 {
         font-size: 1.2rem;
         text-align: center;
         margin-top: 0.5rem;
+        justify-content: center;
     }
 
     #translators, #transcription{
@@ -200,7 +285,9 @@ h6 {
         font-size: 0.8rem;
     }
 
-    #wrapper {
+  
+
+    #essay-wrapper {
         width: initial;
         margin: 0 0.5rem;
         padding: 0 0.5rem; 
@@ -213,6 +300,39 @@ h6 {
         text-align: justify;
     }
 }
+
+/* source:   https://www.joshwcomeau.com/gradient-generator/ */
+
+.gradient {
+    background-image: linear-gradient(
+      135deg,
+      hsl(30deg 39% 27%) 0%,
+      hsl(30deg 32% 29%) 12%,
+      hsl(31deg 27% 31%) 18%,
+      hsl(31deg 23% 33%) 22%,
+      hsl(32deg 20% 35%) 26%,
+      hsl(34deg 18% 37%) 29%,
+      hsl(35deg 16% 38%) 33%,
+      hsl(30deg 24% 40%) 36%,
+      hsl(28deg 32% 41%) 39%,
+      hsl(28deg 40% 41%) 42%,
+      hsl(28deg 48% 42%) 44%,
+      hsl(28deg 56% 42%) 47%,
+      hsl(29deg 66% 41%) 50%,
+      hsl(28deg 57% 44%) 53%,
+      hsl(28deg 51% 47%) 56%,
+      hsl(28deg 46% 49%) 58%,
+      hsl(28deg 43% 50%) 61%,
+      hsl(28deg 42% 52%) 64%,
+      hsl(28deg 42% 54%) 67%,
+      hsl(28deg 35% 50%) 71%,
+      hsl(27deg 34% 45%) 74%,
+      hsl(25deg 33% 40%) 78%,
+      hsl(22deg 31% 35%) 82%,
+      hsl(15deg 27% 28%) 88%,
+      hsl(338deg 27% 18%) 100%
+    );
+  }
 
 /* hr{
     margin: 0px;
