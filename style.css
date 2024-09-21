@@ -99,6 +99,13 @@ hr{
     border-radius: 0.5rem;
 }
 
+.reading-time{
+    color: rgb(8, 7, 7);
+    background-color: #c4b7b7;
+    border-radius: 5px;;
+    
+}
+
 #author {
     font-size: 1.2rem;
     margin: 0%;
@@ -165,7 +172,7 @@ h1 {
     font-size: 4.2rem;
     font-weight: 600;
     line-height: 1.5;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.8rem;
     page-break-after: avoid;
     orphans: 2;
     widows: 2;
@@ -280,12 +287,10 @@ h6 {
         justify-content: center;
     }
 
-    #translators, #transcription{
+    #translators, #transcription, .reading-time{
         margin-top: 0.3rem;
         font-size: 0.8rem;
     }
-
-  
 
     #essay-wrapper {
         width: initial;
@@ -298,6 +303,10 @@ h6 {
         word-wrap: break-word;
         overflow-wrap: break-all;
         text-align: justify;
+    }
+
+    .footer-text {
+        margin: 0.2rem 1rem;
     }
 }
 
