@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+    font-family: 'latin_modern_mono8_regular';
+    src: url('lmmono8-regular-webfont.woff2') format('woff2'),
+         url('lmmono8-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+/* CSS HEX */
+--kobicha: #60452Aff;
+--walnut-brown: #716452ff;
+--tigers-eye: #AF6824ff;
+--bronze: #C77D13ff;
+--bronze-2: #C27B14ff;
+--dark-purple: #39212Aff;
+--caramel: #BA8658ff;
+--progress-bar:  #c0c0c0;
+--lm-font: 'latin_modern_mono8_regular', serif;
+--wrapper-width: 75%;
+--wrapper-width-mobile: 85%;
+--body-bg: hsl(0, 0%, 96%, 50%);
+--notice-bg: rgb(196, 183, 183, 50%);
+--header-font:  "Space Grotesk";
+/* font for the main title of the web page*/ 
+--h1-font: "Vollkorn";
+}
+
+::selection{
+    background-color: yellow;
+    color: #2c2932;
+}
+
+html, body {
+    margin: 0;
+}
+body {
+    font-family: 'latin_modern_mono8_regular', serif;
+    font-weight: 400;
+    
+}
+
+#grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 6rem 1fr 6rem;
+}
+
+.end-side {
+    background: var(--dark-purple);
+    height: auto;
+}
+
+.start-side {
+    background: var(--tigers-eye);
+    height: auto;
+}
+
+
+.doc-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* align-items: center; */
+}
+
+/* scrolling progress bar */
+.changing-div{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 0%;
+    height: 0.5rem;
+    background: var(--progress-bar);
+    animation: grow-progress auto linear;
+    animation-timeline: scroll(root);
+}
+
+@keyframes grow-progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+ /* links */
+a {
+    text-decoration: none;
+    color: #36454F;
+}
+
+a.wikipedia-link::after {
+    /* content: "🔗"; */
+    /* width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+  background-size: 100%;
+  background-image: url("Wikipedia_W.svg");
+  margin-left: 0;
+   */
+
+  /* background-image: url(https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d); */
+  /* background-image: 🔗; */
+  /* background-position: center right;
+  background-repeat: no-repeat; */
+
+  /* background-size: 0.2rem; */
+  /* padding-right: 1rem; */
+}
+
+
+/* end links */
+/* header elements/classes */
+
+header {
+    width: 100%;
+    font-family: var(--header-font), sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    color: #36454F	;
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.8rem;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: center;
+    margin-bottom: -0.7rem;
+    font-family: var(--h1-font), serif;
+    font-optical-sizing: auto;
+    margin-top: 0.5rem;
+    align-self: center;
+    /* flex: 3 0 100%; */
+}
+
+h1.gradient-text {
+    font-size: 6.2rem;
+
+background: -webkit-linear-gradient(30deg, var(--bronze), var(--bronze-2), var(--dark-purple), var(--tigers-eye));
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#author {
+    font-size: 2.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    text-align: center;
+}
+
+.author-text {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    color: #36454F;
+    align-self: center;
+
+}
+
+.wikipedia-link{
+    color: #36454F;
+    text-decoration: none;
+    border-bottom: 1px dotted whitesmoke;
+}
+
+
+.first-publ {
+    font-size: 1rem;
+    align-self: center;
+    margin-left: 5rem;
+    background-color: var(--notice-bg);
+    color: black;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    /* margin-left: auto;
+    margin-right: 3rem; */
+}
+
+.first-publ > a {
+    color: black
+}
+
+.circle{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+    background-color: gray;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+
+#grossman {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMWFhNTMyNTUtNzc2ZS00NzJkLWI4YjQtYmJjNWRmNDE5ZDNjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg);
+    background-size: 100%;
+    /* background-repeat: no-repeat; */
+    /* object-fit: cover; */
+   
+    /* animation: 1s infinite alternate opacity-sliding; */
+}
+
+.grossman-wikipedia{
+    text-decoration: none;
+    color: var(--walnut-brown);
+    text-shadow: 1px 3px 2px whitesmoke;
+    vertical-align: middle;
+}
+
+#translators, #transcription, div .reading-time{
+    /* flex: 3 0 100%; */
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 0.5rem;
+
+}
+
+.helpers{
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.reading-time{
+    color: rgb(8, 7, 7);
+    background-color: rgb(196, 183, 183, 50%);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+/*-----------------header styling end---------------- */
+
+/* footer styling */
+footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1rem;
+    background-color: var(--tigers-eye);
+    /* width: 100%; */
+    margin-top: 1rem;
+    font-family: var(--header-font);
+  }
+
+.footer-text {
+    margin: 0.2rem 4rem;
+    color: snow;
+}
+
+.footer-text > a{
+    color: snow;
+}
+/*-------------footer syling end-----------------------*/
+
+
+a:link {
+    color: lightgray;
+}
+
+
+a:visited{
+    border: 10px solid red;
+    border-radius: 5px;
+}
+
+
+hr{
+    width: var(--wrapper-width);
+    /* text-align: center; */
+}
+
+
+#essay-wrapper{
+    width: var(--wrapper-width);
+    /* margin-left: auto;
+    margin-right: auto; */
+    background-color: var(--body-bg);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    align-self: center;
+}
+
+
+p {
+    margin-bottom: 1rem;
+    color: #2c2932;
+    font-size: 1.4rem;
+    font-family: var(--lm-font);
+    line-height: 1.8rem;
+    text-wrap:pretty;
+}
+
+main p:first-of-type {
+    font-family: var(--header-font);
+    line-height: 1.5;
+    text-wrap: balance;
+    word-break:keep-all;
+    font-size: xx-large;
+    border-radius: 10px;
+    width: initial;
+    background: -webkit-linear-gradient(30deg, green, rgb(57, 151, 57), hsl(240, 38%, 34%) ,var(--dark-purple), var(--tigers-eye));
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-spacing: 6px;
+}
+
+h2, h2>a {
+    color: #000000;
+    font-family: var(--header-font), sans-serif;
+    /* font-size: 2rem; */
+    padding-bottom: 0.5rem;
+    /* font-family: var(--lm-font); */
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left;
+    text-decoration: none;
+}
+
+a.section-title:visited{
+    border: 10px solid red;
+    border-radius: 5px;
+}
+
+
+h3 {
+    padding-top: 16pt;
+    color: #434343;
+    font-size: 14pt;
+    padding-bottom: 4pt;
+    font-family: var(--lm-font);
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+h4 {
+    padding-top: 14pt;
+    color: #666666;
+    font-size: 12pt;
+    padding-bottom: 4pt;
+    font-family: "Bentham", serif;
+
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+h5 {
+    padding-top: 12pt;
+    color: #666666;
+    font-size: 11pt;
+    padding-bottom: 4pt;
+    font-family: "Bentham", serif;
+
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+h6 {
+    padding-top: 12pt;
+    color: #666666;
+    font-size: 11pt;
+    padding-bottom: 4pt;
+    font-family: "Bentham", serif;
+
+    line-height: 1.15;
+    page-break-after: avoid;
+    font-style: italic;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    
+    html, body {
+        margin: 0 0;
+        padding: 0 0;
+        background-color: var(--body-bg);
+        display: flex;
+    }
+    #grid {
+        display: flex;
+    }
+
+    header {
+        width:80%;
+        padding: 0.4rem 0.4rem;
+        text-align: center;
+    }
+
+    h1.gradient-text {
+        
+        font-size: 2.5rem;
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+
+    #author {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 0.5rem;
+        justify-content: center;
+    }
+
+    #translators, #transcription, .reading-time{
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    #essay-wrapper {
+        width: initial;
+        margin: 0 0.5rem;
+        padding: 0 0.5rem; 
+    }
+
+    p{
+        font-size: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-all;
+        text-align: justify;
+    }
+
+    .footer-text {
+        margin: 0.2rem 1rem;
+    }
+}
+
+/* source:   https://www.joshwcomeau.com/gradient-generator/ */
+
+.gradient {
+    background-image: linear-gradient(
+      135deg,
+      hsl(30deg 39% 27%) 0%,
+      hsl(30deg 32% 29%) 12%,
+      hsl(31deg 27% 31%) 18%,
+      hsl(31deg 23% 33%) 22%,
+      hsl(32deg 20% 35%) 26%,
+      hsl(34deg 18% 37%) 29%,
+      hsl(35deg 16% 38%) 33%,
+      hsl(30deg 24% 40%) 36%,
+      hsl(28deg 32% 41%) 39%,
+      hsl(28deg 40% 41%) 42%,
+      hsl(28deg 48% 42%) 44%,
+      hsl(28deg 56% 42%) 47%,
+      hsl(29deg 66% 41%) 50%,
+      hsl(28deg 57% 44%) 53%,
+      hsl(28deg 51% 47%) 56%,
+      hsl(28deg 46% 49%) 58%,
+      hsl(28deg 43% 50%) 61%,
+      hsl(28deg 42% 52%) 64%,
+      hsl(28deg 42% 54%) 67%,
+      hsl(28deg 35% 50%) 71%,
+      hsl(27deg 34% 45%) 74%,
+      hsl(25deg 33% 40%) 78%,
+      hsl(22deg 31% 35%) 82%,
+      hsl(15deg 27% 28%) 88%,
+      hsl(338deg 27% 18%) 100%
+    );
+  }
+
+
+
+/* hr{
+    margin: 0px;
+    padding: 0px;
+    background-size: contain;
+    display: block;
+    height: 1rem;
+    border-image: url("/images/Auschwitz-children-Yad-Vashem.jpg") 200 30 90 10/ 2rem 1rem 0.5rem / 18px 14px 9px 4px
+    space;
+    filter:blur(1px);
+} */
+
+/* 
+.c7 {
+    padding-top: 20pt;
+    padding-bottom: 6pt;
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+.c1 {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 11pt;
+    font-family: "Bentham", serif;
+    font-style: normal
+}
+
+.c4 {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 20pt;
+    font-family: "Bentham", serif;
+
+    font-style: normal
+}
+
+.c11 {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 26pt;
+    font-family: "Bentham", serif;
+
+    font-style: normal
+}
+
+.c0 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.15;
+    orphans: 2;
+    widows: 2;
+    text-align: left;
+    height: 11pt
+}
+
+.c2 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.15;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+.c8 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.15;
+    text-align: left;
+    height: 11pt
+}
+
+.c10 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.0;
+    text-align: left
+}
+
+.c9 {
+    background-color: #ffffff;
+    padding: 2rem 6rem;
+}
+
+.c5 {
+    font-size: 15pt;
+    color: #ff0000;
+    font-weight: 700
+}
+
+.c3 {
+    font-style: italic
+}
+
+.c6 {
+    font-weight: 700
+}
+
+.title {
+    padding-top: 0pt;
+    color: #000000;
+    font-size: 26pt;
+    padding-bottom: 3pt;
+    font-family: "Bentham", serif;
+
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+}
+
+.subtitle {
+    padding-top: 0pt;
+    color: #666666;
+    font-size: 15pt;
+    padding-bottom: 16pt;
+    font-family: "Bentham", serif;
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    text-align: left
+} */
