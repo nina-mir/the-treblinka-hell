@@ -151,7 +151,7 @@ h1 {
 h1.gradient-text {
     font-size: 6.2rem;
 
-background: -webkit-linear-gradient(30deg, var(--bronze), var(--bronze-2), var(--dark-purple), var(--tigers-eye));
+background: -webkit-linear-gradient(30deg, rgb(26, 1, 1), rgb(37, 24, 24),var(--bronze), var(--bronze-2), var(--dark-purple), var(--tigers-eye));
 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -275,6 +275,7 @@ footer {
 
 a:link {
     color: lightgray;
+
 }
 
 
@@ -300,6 +301,25 @@ hr{
     align-self: center;
 }
 
+.lead-wrapper figure{
+    float: right;
+    shape-outside: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+
+figcaption {
+    margin-left: 1rem;
+}
+
+cite a{
+    border-bottom: 1px dotted whitesmoke;
+}
 
 p {
     margin-bottom: 1rem;
@@ -310,15 +330,16 @@ p {
     text-wrap:pretty;
 }
 
-main p:first-of-type {
+main p:first-child {
     font-family: var(--header-font);
+    font-weight: 700;
     line-height: 1.5;
     text-wrap: balance;
     word-break:keep-all;
     font-size: xx-large;
     border-radius: 10px;
     width: initial;
-    background: -webkit-linear-gradient(30deg, green, rgb(57, 151, 57), hsl(240, 38%, 34%) ,var(--dark-purple), var(--tigers-eye));
+    background: -webkit-linear-gradient(45deg, rgb(23, 1, 1),rgb(18, 10, 10), gray, black, green, rgb(57, 151, 57), hsl(240, 38%, 34%) ,var(--dark-purple), var(--tigers-eye));
 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   word-spacing: 6px;
@@ -415,23 +436,27 @@ h6 {
     }
 
     header {
-        width:80%;
-        padding: 0.4rem 0.4rem;
+        width:70%;
+        padding: 0;
         text-align: center;
     }
 
     h1.gradient-text {
-        
-        font-size: 2.5rem;
-        text-align: center;
+        font-size: 1.5rem;
+        /* text-align: center; */
         letter-spacing: 0.1rem;
     }
 
+    .first-publ {
+        margin: 0;
+    }
+
     #author {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
         margin-top: 0.5rem;
         justify-content: center;
+        flex-direction: column;
     }
 
     #translators, #transcription, .reading-time{
@@ -439,10 +464,31 @@ h6 {
         font-size: 0.8rem;
     }
 
+    /* figure {
+        aspect-ratio: 1;
+        height: auto;
+        width: auto;
+    } */
+
     #essay-wrapper {
         width: initial;
         margin: 0 0.5rem;
         padding: 0 0.5rem; 
+    }
+
+    main p:first-child{
+        font-size:1rem;
+        font-family: var(--header-font);
+        /* line-height: 1.5; */
+        text-wrap: balance;
+        word-break:normal;
+        font-size: 1rem;
+        /* border-radius: 10px; */
+        width: inherit;
+    }
+
+    #train-station-fig {
+        display: none;
     }
 
     p{
@@ -452,6 +498,11 @@ h6 {
         text-align: justify;
     }
 
+    .lead-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
     .footer-text {
         margin: 0.2rem 1rem;
     }
