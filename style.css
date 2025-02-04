@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
-
-@font-face {
-    font-family: 'latin_modern_mono8_regular';
-    src: url('lmmono8-regular-webfont.woff2') format('woff2'),
-         url('lmmono8-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
 
 :root{
 /* CSS HEX */
@@ -18,13 +12,14 @@
 --bronze-2: #C27B14ff;
 --dark-purple: #39212Aff;
 --caramel: #BA8658ff;
---lm-font: 'latin_modern_mono8_regular', serif;
 --wrapper-width: 75%;
 --wrapper-width-mobile: 85%;
 --body-bg: #F5F5F5;
 --header-font:  "Space Grotesk";
 /* font for the main title of the web page*/ 
---h1-font: "Vollkorn";
+--vollkorn: "Vollkorn";
+--lato-font: "Lato", serif;
+--vollkorn-sc: "Vollkorn SC", serif;
 }
 
 ::selection{
@@ -32,9 +27,10 @@
     color: #2c2932;
 }
 
-html, body {
+* {
     margin: 0;
 }
+
 body {
     font-family: 'latin_modern_mono8_regular', serif;
     font-weight: 400;
@@ -45,13 +41,97 @@ body {
     align-items: center;
 }
 
-
 header {
-    width: var(--wrapper-width);
+    width: 100%;
     font-family: var(--header-font), sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: oklch(18% 0.06 350);/* Dark, carbon-like ash */
+    color: rgb(231, 205, 205);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: -0.7rem;
+    font-family: var(--vollkorn-sc);
+    text-align: center; 
+    font-size: clamp(4vw, 6vw, 8vw);
+    border-top: 10px solid oklch(30% 0.04 20);
+    background-color:oklch(30.56% 0.0022 335.43 / 99.41%);  
+    /* flex-basis: 100%; */
+}
+
+.bottom-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.bottom-wrapper > p {
+    font-family: var(--vollkorn);
+
+}
+
+.bottom-wrapper div:last-child{
+    margin-top: 1rem;
+}
+
+.circle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+    background-color: gray;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+p.header-content{
+    color: inherit;
+    font-family: var(--vollkorn);
+}
+
+#grossman {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMWFhNTMyNTUtNzc2ZS00NzJkLWI4YjQtYmJjNWRmNDE5ZDNjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg);
+    background-size: 100%;
+}
+
+
+a {
+    outline-color: transparent;
+    text-decoration: none;
+
+}
+
+a:link {
+    color: #6900ff;
+
+}
+
+a:visited {
+    color: #a5c300;
+
+}
+
+a:focus {
+    text-decoration: none;
+    background: #bae498;
+  }
+
+a:hover {
+        text-decoration: none;
+        background: #545851;
+}
+
+a:active {
+    background: #6900ff;
+    color: #cdfeaa;
 }
 
 footer {
@@ -62,7 +142,7 @@ footer {
     /* width: 100%; */
     margin-top: 1rem;
     font-family: var(--header-font);
-  }
+}
 
 .footer-text {
     margin: 0.2rem 4rem;
@@ -73,22 +153,12 @@ footer {
     color: snow;
 }
 
-a:link {
-    color: lightgray;
-}
-
-
-a:visited{
-    border: 10px solid red;
-    border-radius: 5px;
-}
 
 
 hr{
     width: var(--wrapper-width);
     /* text-align: center; */
 }
-
 
 #essay-wrapper{
     width: var(--wrapper-width);
@@ -99,96 +169,28 @@ hr{
     border-radius: 0.5rem;
 }
 
-.reading-time{
-    color: rgb(8, 7, 7);
-    background-color: #c4b7b7;
-    border-radius: 5px;;
-    
-}
-
-#author {
-    font-size: 1.2rem;
-    margin: 0%;
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-}
-
-.author-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #36454F;
-}
-
 .wikipedia-link{
     color: #36454F;
     text-decoration: none;
     border-bottom: 1px dotted whitesmoke;
-
-}
-.first-publ {
-    font-size: 0.85rem;
-}
-
-.circle{
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    margin-right: 0.7rem;
-    background-color: gray;
-    display: inline-block;
-    vertical-align:middle;
-}
-
-
-#grossman {
-    background-image: url(https://m.media-amazon.com/images/M/MV5BMWFhNTMyNTUtNzc2ZS00NzJkLWI4YjQtYmJjNWRmNDE5ZDNjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg);
-    background-size: 100%;
-    /* background-repeat: no-repeat; */
-    /* object-fit: cover; */
-   
-    /* animation: 1s infinite alternate opacity-sliding; */
-}
-
-.grossman-wikipedia{
-    text-decoration: none;
-    color: var(--walnut-brown);
-    text-shadow: 1px 3px 2px whitesmoke;
-    vertical-align: middle;
 }
 
 p {
     margin-bottom: 1rem;
     color: #2c2932;
     font-size: 1.2rem;
-    font-family: var(--lm-font);
+    font-family: var(--lato-font);
     line-height: 1.5rem;
     text-wrap:pretty;
 }
 
-h1 {
-    color: #36454F	;
-    font-size: 4.2rem;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.8rem;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left;
-    margin-bottom: -0.7rem;
-    font-family: var(--h1-font), serif;
-    font-optical-sizing: auto;
-    margin-top: 0.5rem;
-}
 
 h2, h2>a {
     color: #000000;
     font-family: var(--header-font), sans-serif;
     /* font-size: 2rem; */
     padding-bottom: 0.5rem;
-    /* font-family: var(--lm-font); */
+    /* font-family: var(--lato-font); */
     line-height: 1.15;
     page-break-after: avoid;
     orphans: 2;
@@ -203,70 +205,13 @@ a.section-title:visited{
 }
 
 
-h3 {
-    padding-top: 16pt;
-    color: #434343;
-    font-size: 14pt;
-    padding-bottom: 4pt;
-    font-family: var(--lm-font);
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-h4 {
-    padding-top: 14pt;
-    color: #666666;
-    font-size: 12pt;
-    padding-bottom: 4pt;
-    font-family: "Bentham", serif;
-
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-h5 {
-    padding-top: 12pt;
-    color: #666666;
-    font-size: 11pt;
-    padding-bottom: 4pt;
-    font-family: "Bentham", serif;
-
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-h6 {
-    padding-top: 12pt;
-    color: #666666;
-    font-size: 11pt;
-    padding-bottom: 4pt;
-    font-family: "Bentham", serif;
-
-    line-height: 1.15;
-    page-break-after: avoid;
-    font-style: italic;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-
 @media only screen and (max-width: 700px) {
     
-    html, body {
+    * {
         margin: 0 0;
         padding: 0 0;
-        background-color: var(--body-bg);
-    }
+        /* backgro  und-color: var(--body-bg); */
+    }   
 
     header {
         width:initial;
@@ -275,22 +220,20 @@ h6 {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         text-align: center;
         letter-spacing: 0.1rem;
     }
 
-    #author {
-        font-size: 1.2rem;
-        text-align: center;
-        margin-top: 0.5rem;
-        justify-content: center;
+    .bottom-wrapper{
+        display: flex;
+        align-items: center;
     }
 
-    #translators, #transcription, .reading-time{
-        margin-top: 0.3rem;
-        font-size: 0.8rem;
+    .bottom-wrapper div:last-child{
+        width: 70%;
     }
+
 
     #essay-wrapper {
         width: initial;
@@ -342,137 +285,3 @@ h6 {
       hsl(338deg 27% 18%) 100%
     );
   }
-
-/* hr{
-    margin: 0px;
-    padding: 0px;
-    background-size: contain;
-    display: block;
-    height: 1rem;
-    border-image: url("/images/Auschwitz-children-Yad-Vashem.jpg") 200 30 90 10/ 2rem 1rem 0.5rem / 18px 14px 9px 4px
-    space;
-    filter:blur(1px);
-} */
-
-/* 
-.c7 {
-    padding-top: 20pt;
-    padding-bottom: 6pt;
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c1 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt;
-    font-family: "Bentham", serif;
-    font-style: normal
-}
-
-.c4 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 20pt;
-    font-family: "Bentham", serif;
-
-    font-style: normal
-}
-
-.c11 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 26pt;
-    font-family: "Bentham", serif;
-
-    font-style: normal
-}
-
-.c0 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.15;
-    orphans: 2;
-    widows: 2;
-    text-align: left;
-    height: 11pt
-}
-
-.c2 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.15;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c8 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.15;
-    text-align: left;
-    height: 11pt
-}
-
-.c10 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    text-align: left
-}
-
-.c9 {
-    background-color: #ffffff;
-    padding: 2rem 6rem;
-}
-
-.c5 {
-    font-size: 15pt;
-    color: #ff0000;
-    font-weight: 700
-}
-
-.c3 {
-    font-style: italic
-}
-
-.c6 {
-    font-weight: 700
-}
-
-.title {
-    padding-top: 0pt;
-    color: #000000;
-    font-size: 26pt;
-    padding-bottom: 3pt;
-    font-family: "Bentham", serif;
-
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.subtitle {
-    padding-top: 0pt;
-    color: #666666;
-    font-size: 15pt;
-    padding-bottom: 16pt;
-    font-family: "Bentham", serif;
-    line-height: 1.15;
-    page-break-after: avoid;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-} */
