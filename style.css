@@ -12,8 +12,8 @@
 --bronze-2: #C27B14ff;
 --dark-purple: #39212Aff;
 --caramel: #BA8658ff;
---wrapper-width: 75%;
---wrapper-width-mobile: 85%;
+--wrapper-width: 50%;
+--wrapper-width-mobile: 65%;
 --body-bg: #F5F5F5;
 --header-font:  "Space Grotesk";
 /* font for the main title of the web page*/ 
@@ -32,13 +32,15 @@
 }
 
 body {
-    font-family: 'latin_modern_mono8_regular', serif;
+    font-family: serif;
     font-weight: 400;
     display: flex;
     flex-direction: column;
     height: 100%;
     /* justify-content: center; */
     align-items: center;
+    background-color: var(--body-bg);
+
 }
 
 header {
@@ -95,8 +97,13 @@ h1 {
 p.header-content{
     color: inherit;
     font-family: var(--vollkorn);
+    text-align: left; 
 }
 
+.header-content .author-name{
+    font-family: var(--vollkorn-sc);
+    /* font-size: x-large; */
+}
 #grossman {
     background-image: url(https://m.media-amazon.com/images/M/MV5BMWFhNTMyNTUtNzc2ZS00NzJkLWI4YjQtYmJjNWRmNDE5ZDNjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg);
     background-size: 100%;
@@ -139,7 +146,6 @@ footer {
     flex-shrink: 0;
     padding: 1rem;
     background-color: var(--tigers-eye);
-    /* width: 100%; */
     margin-top: 1rem;
     font-family: var(--header-font);
 }
@@ -153,6 +159,10 @@ footer {
     color: snow;
 }
 
+.copyright{
+    text-align: center;
+}
+
 
 
 hr{
@@ -164,7 +174,6 @@ hr{
     width: var(--wrapper-width);
     /* margin-left: auto;
     margin-right: auto; */
-    background-color: var(--body-bg);
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
 }
@@ -210,19 +219,41 @@ a.section-title:visited{
     * {
         margin: 0 0;
         padding: 0 0;
+        box-sizing: border-box;
+        /* overflow-x: hidden; */
+
+
         /* backgro  und-color: var(--body-bg); */
     }   
 
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        /* width: 100vw; Ensures it doesn't exceed the viewport */
+        max-width: 100vw;
+
+    }
+      
+
     header {
-        width:initial;
+        /* width:80%; */
         padding: 0.4rem 0.4rem;
         text-align: center;
+        max-width: 100%;
     }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 12vw  ;
         text-align: center;
         letter-spacing: 0.1rem;
+        border-top: none;
+        border-radius: 1px;
+    }
+
+    .header-content .author-name{
+        /* font-family: var(--vollkorn-sc); */
+        font-size: x-large;
     }
 
     .bottom-wrapper{
@@ -231,14 +262,14 @@ a.section-title:visited{
     }
 
     .bottom-wrapper div:last-child{
-        width: 70%;
+        width: 60%;
     }
 
 
     #essay-wrapper {
         width: initial;
-        margin: 0 0.5rem;
-        padding: 0 0.5rem; 
+        /* margin: 0 0.5rem; */
+        padding: 0 3vw; 
     }
 
     p{
@@ -246,6 +277,9 @@ a.section-title:visited{
         word-wrap: break-word;
         overflow-wrap: break-all;
         text-align: justify;
+    }
+    footer{
+        width: 100%;
     }
 
     .footer-text {
