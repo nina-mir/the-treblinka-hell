@@ -40,6 +40,7 @@ body {
     /* justify-content: center; */
     align-items: center;
     background-color: var(--body-bg);
+    position: relative;
 
 }
 
@@ -51,11 +52,60 @@ header {
     font-style: normal;
     background-color: oklch(18% 0.06 350);/* Dark, carbon-like ash */
     color: rgb(231, 205, 205);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    /* padding-top: 4rem; */
+    /* padding-bottom: 4rem; */
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    transition: padding-top  1000ms linear;
 }
+
+#top-padding{
+    width: 100%;
+    height: 4rem;
+    background-color: oklch(18% 0.06 350);/* Dark, carbon-like ash */
+    flex-shrink: 0;
+    transition: transform 3s linear;
+    z-index: 10;
+}
+
+#soviet-red-top{
+    width: 100%;
+    height: 4rem;
+    background-color: var(--tigers-eye);/* Dark, carbon-like ash */
+    position: absolute;
+    z-index: 5;
+}
+
+.top-move {
+    transform: translateY(-4rem); /* Translates the element upwards by 4rem */
+} 
+
+.hidden- {
+    display: none;
+    /* visibility: hidden; */
+    position: absolute;
+    left: -9999px;
+}
+  
+.sticking-{
+    /* background-color: pink; */
+    padding-top: 0;
+    background-color: none;
+    margin-bottom: 0;
+
+}
+
+.bottom-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+   transform: display 1s;
+}
+
 
 h1 {
     font-weight: 700;
@@ -68,12 +118,6 @@ h1 {
     /* flex-basis: 100%; */
 }
 
-.bottom-wrapper{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: larger;
-}
 
 .bottom-wrapper > p {
     font-family: var(--vollkorn);
@@ -187,10 +231,11 @@ hr{
 p {
     margin-bottom: 1rem;
     color: #2c2932;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: var(--lato-font);
-    line-height: 1.5rem;
+    line-height: 1.9rem;
     text-wrap:pretty;
+    
 }
 
 
@@ -232,10 +277,12 @@ a.section-title:visited{
       
 
     header {
-        padding: 0.4rem 0.4rem;
+        /* padding: 0.4rem 0.4rem; */
         text-align: center;
         max-width: 100%;
     }
+
+
 
     h1 {
         font-size: 12vw  ;
@@ -265,10 +312,14 @@ a.section-title:visited{
     }
 
     p{
-        font-size: 1rem;
-        word-wrap: break-word;
+        font-size: 1.4rem;
+        text-wrap: pretty;
         overflow-wrap: break-all;
-        text-align: justify;
+        hyphens: auto;
+        line-height: 1.9rem;
+        white-space: normal;
+
+        /* text-align: justify; */
     }
     footer{
         width: 100%;
