@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
 
+@import url("https://use.typekit.net/wwf2iyo.css");
+
+
 :root{
 /* CSS HEX */
 --kobicha: #60452Aff;
@@ -45,9 +48,12 @@ body {
 
 header {
     width: 100%;
-    font-family: var(--header-font), sans-serif;
+    /* font-family: var(--header-font), sans-serif; */
+    font-family: "bennet-text-four", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-optical-sizing: auto;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: normal;
     background-color: oklch(18% 0.06 350);/* Dark, carbon-like ash */
     color: rgb(231, 205, 205);
@@ -188,7 +194,10 @@ p {
     margin-bottom: 1rem;
     color: #2c2932;
     font-size: 1.2rem;
-    font-family: var(--lato-font);
+    /* font-family: var(--lato-font); */
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;    
     line-height: 1.5rem;
     text-wrap:pretty;
 }
