@@ -7,6 +7,7 @@
 
 :root{
 /* CSS HEX */
+--essay-font-size: 1.4rem;
 --kobicha: #60452Aff;
 --walnut-brown: #716452ff;
 --tigers-eye: #AF6824ff;
@@ -57,7 +58,7 @@ header {
     background-color: oklch(18% 0.06 350);/* Dark, carbon-like ash */
     color: rgb(231, 205, 205);
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     display: flex;
     flex-direction: column;
 }
@@ -78,10 +79,14 @@ h1 {
     justify-content: center;
     text-align: center;
     font-size: larger;
+    gap: 1.5rem;
+
 }
 
 .bottom-wrapper > p {
-    font-family: var(--vollkorn);
+    /* font-family: var(--vollkorn); */
+    font-family: "bennet-text-four", sans-serif;
+
 
 }
 
@@ -109,6 +114,18 @@ p.header-content{
     font-family: var(--vollkorn-sc);
     /* font-size: x-large; */
 }
+
+.header-content.reading-time {
+    font-size:1rem;
+    letter-spacing: 1px;
+    background-color: #9ca099;
+    max-width: fit-content;
+    border-radius: 10px;
+    color: #2c2932;
+    padding: 0.1rem 0.3rem;
+}
+
+
 #grossman {
     background-image: url(https://m.media-amazon.com/images/M/MV5BMWFhNTMyNTUtNzc2ZS00NzJkLWI4YjQtYmJjNWRmNDE5ZDNjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg);
     background-size: 100%;
@@ -192,13 +209,15 @@ hr{
 p {
     margin-bottom: 1rem;
     color: #2c2932;
-    font-size: 1.2rem;
+    font-size: var(--essay-font-size);
     /* font-family: var(--lato-font); */
     font-family: "garamond-premier-pro", serif;
     font-weight: 400;
     font-style: normal;    
     line-height: 1.5rem;
     text-wrap:pretty;
+    /* text-indent: 5%; */
+
 }
 
 
@@ -273,6 +292,31 @@ a.section-title:visited{
         width: 60%;
     }
 
+    .essay-info{
+        position: relative;
+    }
+
+    .header-content.reading-time {
+        position: absolute;
+        font-size:1.2rem;
+        /* letter-spacing: 1px; */
+        background-color: #9ca099;
+        max-width: fit-content;
+        border-radius: 10px;
+        color: #2c2932;
+        /* padding: 0.1rem 0.15rem; */
+        text-wrap: nowrap;
+        width: fit-content;
+        /* margin-left: -1.5rem; */
+        /* transform: translate(-50%, 0%); */
+        /* transform: translateX(-50vw); */
+        /* margin: 0 auto; */
+        /* display: block; */
+        top: 100%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+    
 
     #essay-wrapper {
         width: initial;
@@ -281,10 +325,12 @@ a.section-title:visited{
     }
 
     p{
-        font-size: 1rem;
+        font-size: var(--essay-font-size);
         word-wrap: break-word;
-        overflow-wrap: break-all;
-        text-align: justify;
+        text-wrap:pretty;
+
+        /* text-align: justify; */
+        /* text-indent: 5%; */
     }
     footer{
         width: 100%;
