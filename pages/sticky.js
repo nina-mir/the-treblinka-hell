@@ -15,7 +15,7 @@ const options = {
 const navObserverOne = new IntersectionObserver((entries)=>{
     header.classList.toggle('sticking', !entries[0].isIntersecting)
     topPadding.classList.toggle('top-move', !entries[0].isIntersecting)
-    // btmWrapper.classList.toggle('hidden', !entries[0].isIntersecting)
+    btmWrapper.classList.toggle('hidden', !entries[0].isIntersecting)
 }, {rootMargin: "10px 0px 0px 0px"})
 
 
