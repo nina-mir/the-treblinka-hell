@@ -106,7 +106,10 @@ h1 {
 .essay-info{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: flex-start; */
+    justify-content: end;
+    align-items: left;
+
 }
 
 .header-content.translators{
@@ -141,6 +144,8 @@ p.header-content{
     display: flex;
     justify-content:center;
     margin: 0;
+    /* position: relative; */
+    top:5px;
 }
 
 .header-content.reading-time {
@@ -307,6 +312,10 @@ a.section-title:visited{
         white-space: nowrap; /* Prevents text from wrapping */
     }
 
+    #grossman{
+        display: none;
+    }
+
     .header-content .author-name{
         font-size: x-large;
     }
@@ -316,16 +325,17 @@ a.section-title:visited{
         align-items: center;
     }
 
-    .bottom-wrapper div:last-child{
+    /* .bottom-wrapper div:last-child{
         width: 60%;
-    }
+    } */
 
     .essay-info{
         position: relative;
+        align-self: flex-start;
     }
 
     .header-content.reading-time {
-        position: absolute;
+        /* position: absolute; */
         font-size:1.2rem;
         /* letter-spacing: 1px; */
         background-color: #9ca099;
@@ -333,11 +343,11 @@ a.section-title:visited{
         border-radius: 10px;
         color: #2c2932;
         /* padding: 0.1rem 0.15rem; */
-        text-wrap: nowrap;
+        /* text-wrap: nowrap; */
         width: fit-content;
-        top: 100%;
-        left: 25%;
-        transform: translate(-50%, -50%);
+        /* top: 100%;
+        left: 25%; */
+        /* transform: translate(-50%, -50%); */
     }
     
     .header-content.translators {
