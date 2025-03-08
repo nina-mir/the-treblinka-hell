@@ -51,7 +51,7 @@ function createFullStar(direction) {
   aWrapper.appendChild(li)
 
   if (direction == "left") {
-    aWrapper.href = 'index.html'
+    aWrapper.href = '1.html'
   } else if (direction == "right") {
     aWrapper.href = pageNamesData[numTotalPages - 1]
   }
