@@ -33,7 +33,7 @@ ul.classList.add('pagination')
 <li class="full-star">
   <span aria-hidden="true">&laquo;</span>
   <span class="visuallyhidden">first page</span>
-</li>
+</li> ›>‹<«»
 </a> */}
 
 function createFullStar(direction) {
@@ -50,11 +50,24 @@ function createFullStar(direction) {
   li.append(spanVisuallyHidden)
   aWrapper.appendChild(li)
 
+  // add symbol
+  let symbolSpan = document.createElement('span')
+  
+  symbolSpan.classList.add('symbol-span')
+
+
+
   if (direction == "left") {
     aWrapper.href = '1.html'
+    symbolSpan.innerText = '«'
+    symbolSpan.classList.add('left-symbol')
   } else if (direction == "right") {
     aWrapper.href = pageNamesData[numTotalPages - 1]
+    symbolSpan.innerText = '»'
+    symbolSpan.classList.add('right-symbol')
   }
+
+  aWrapper.appendChild(symbolSpan)
 
   return aWrapper
 }
@@ -101,19 +114,32 @@ function createHalfStar(direction) {
   spanVisuallyHidden.classList.add('visuallyhidden')
   let text = ""
 
+  // add symbol
+  let symbolSpan = document.createElement('span')
+    symbolSpan.className = 'symbol-span'
+
   if (direction == "left") {
     text = "previous page"
     aWrapper.href = currentPageNumber > 1 ? `${+currentPageNumber - 1}.html` : ''
+    symbolSpan.innerText = '‹'
+    symbolSpan.classList.add('left-symbol')
+
+    // ›>‹<«»
 
   } else if (direction == "right") {
     text = "next page"
     aWrapper.href = currentPageNumber < numTotalPages ? `${+currentPageNumber + 1}.html` : ''
+    symbolSpan.innerText = '›'
+    symbolSpan.classList.add('right-symbol')
 
   }
 
   spanVisuallyHidden.textContent = text
   li.append(spanVisuallyHidden)
   aWrapper.appendChild(li)
+
+  aWrapper.appendChild(symbolSpan)
+
   return aWrapper
 }
 

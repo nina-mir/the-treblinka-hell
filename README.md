@@ -2,8 +2,8 @@
 src="https://images.wsj.net/im-81502/?width=700&size=1.5&pixel_ratio=2"></img>
 
 
-# The Treblinka Hell
-A web typesetting project for "The Hell of Treblinka" essay by the renown Soviet author and journalist, Vassili Grossman, about the German WW2 death destination, Treblinka concentration camp.
+# The Treblinka Hell 
+A web typesetting project [🔗](https://nina-mir.github.io/the-treblinka-hell/) for "The Hell of Treblinka" essay by the renown Soviet author and journalist, Vassili Grossman, about the German WW2 death destination, Treblinka concentration camp.
 
 📷: Vasily Grossman with the Red Army in Schwerin, Germany, in 1945. Photo: Heritage Images/Getty Images
 [original link](https://images.wsj.net/im-81502/?width=700&size=1.5&pixel_ratio=2)
@@ -37,6 +37,6 @@ of the General Jewish Workers’ Union of Poland 1945.
 
 
 ### 🆘 How to Contribute:
-- Open an issue and communicate your thuoghts! 💚
+- Open an issue on this repo and communicate your thuoghts/codes please! 💚
 
 
