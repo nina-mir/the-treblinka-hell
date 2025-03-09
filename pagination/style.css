@@ -1,5 +1,3 @@
-/* // pagination CSS */
-
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap");
 @import url("https://use.typekit.net/wwf2iyo.css");
 
@@ -16,7 +14,7 @@
   --wrapper-width: 50%;
   --wrapper-width-mobile: 65%;
   --body-bg: #f5f5f5;
-  --header-font:"bennet-text-four", sans-serif;
+  --header-font: "bennet-text-four", sans-serif;
   /* font for the main title of the web page*/
   --vollkorn: "Vollkorn";
   --vollkorn-sc: "Vollkorn SC", serif;
@@ -49,7 +47,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* justify-content: center; */
   align-items: center;
   background-color: var(--body-bg);
 }
@@ -65,7 +62,6 @@ header {
   background-color: oklch(18% 0.06 350); /* Dark, carbon-like ash */
   color: rgb(231, 205, 205);
   padding-top: 4rem;
-  /* padding-bottom: 4rem; */
   display: flex;
   flex-direction: column;
 }
@@ -78,7 +74,6 @@ h1 {
   font-size: clamp(4vw, 6vw, 8vw);
   border-top: 10px solid oklch(30% 0.04 20);
   background-color: oklch(30.56% 0.0022 335.43 / 99.41%);
-  /* flex-basis: 100%; */
 }
 
 .bottom-wrapper {
@@ -91,7 +86,6 @@ h1 {
 }
 
 .bottom-wrapper > p {
-  /* font-family: var(--vollkorn); */
   font-family: "bennet-text-four", sans-serif;
 }
 
@@ -110,7 +104,6 @@ h1 {
 .essay-info {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   justify-content: end;
   align-items: left;
 }
@@ -138,7 +131,6 @@ p.header-content {
 
 .header-content .author-name {
   font-family: var(--vollkorn-sc);
-  /* font-size: x-large; */
 }
 
 .reading-time-wrapper {
@@ -147,7 +139,6 @@ p.header-content {
   display: flex;
   justify-content: center;
   margin: 0;
-  /* position: relative; */
   top: 5px;
 }
 
@@ -159,11 +150,6 @@ p.header-content {
   border-radius: 10px;
   color: #2c2932;
   padding: 0.1rem 0.3rem;
-  /* flex-basis: 100%; */
-  /* display: block; */
-  /* width: 100%; */
-  /* text-align: left; */
-  /* padding: 0 0.1rem; */
   margin-bottom: 0.4rem;
 }
 
@@ -200,9 +186,8 @@ a:active {
   color: #cdfeaa;
 }
 
-a:link.author-name{
+a:link.author-name {
   color: #f5f5f5;
-
 }
 
 footer {
@@ -214,7 +199,8 @@ footer {
   font-family: var(--header-font);
 }
 
-.footer-text {
+.footer-text,
+.copyright-disclaimer-text {
   margin: 0.2rem 4rem;
   color: snow;
 }
@@ -225,6 +211,16 @@ footer {
 
 .copyright {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:hover.github-logo,
+:visited.github-logo {
+  background: black;
+  box-shadow: 1px 1px var(--caramel), -1px -1px var(--body-bg),
+    4px 4px var(--walnut-brown);
 }
 
 hr {
@@ -246,12 +242,10 @@ hr {
   border-bottom: 1px dotted whitesmoke;
 }
 
-.first-paragraph::first-letter{
+.first-paragraph::first-letter {
   /* font-size: 4rem; */
   background-color: #000000;
   color: white;
-  /* line-height: 1; */
-  /* display: inline-block;  Makes background wrap around the letter */
   -webkit-initial-letter: 3;
   initial-letter: 3;
   border-radius: 2px;
@@ -259,7 +253,6 @@ hr {
   font-size: 250%;
   padding: 6px 3px;
   margin-right: 0.4rem;
-  /* float: left; */
 }
 
 p {
@@ -271,37 +264,23 @@ p {
   font-style: normal;
   line-height: 1.85rem;
   text-wrap: pretty;
-  /* text-indent: 5%; */
 }
 
 .de pre {
-  font-family: sans ;
+  font-family: sans;
 }
 
-.poetry pre{
-  /* text-align: center; */
+.poetry pre {
   font-style: italic;
   font-size: var(--essay-font-size);
 }
 
-.translation{
+.translation {
   background-color: #f3ebeb;
   border-radius: 5px;
   /* text-indent: 0.5rem; */
   padding: 0.25rem 0.5rem;
 }
-
-/* h2,
-h2 > a {
-  color: #000000;
-  font-family: ff-dagny-web-pro, sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  padding-bottom: 0.5rem;
-  line-height: 1.15;
-  text-align: left;
-  text-decoration: none;
-} */
 
 a.section-title:visited {
   border: 10px solid red;
@@ -324,7 +303,7 @@ a.section-title:visited {
 nav {
   box-sizing: border-box;
   border-top: 1px solid #eee;
-  margin-bottom: 1.5rem ;
+  margin-bottom: 1.5rem;
   font: 1.2rem sans-serif;
   display: flex;
   justify-content: center;
@@ -358,10 +337,8 @@ nav {
 
 .pagination a[aria-current="page"]:hover {
   background: none;
-  text-shadow:  1px 0px var(--bronze-2);
-  box-shadow: 1px 1px 0px red, 
-              -1px -1px var(--dark-purple);
-
+  text-shadow: 1px 0px var(--bronze-2);
+  box-shadow: 1px 1px 0px red, -1px -1px var(--dark-purple);
 }
 
 .full-star {
@@ -405,18 +382,20 @@ a.wrapper-half-star:hover {
 }
 
 /* Apply shadow on hover */
-.full-star:hover::before, .half-star:hover::before {
+.full-star:hover::before,
+.half-star:hover::before {
   background: var(--kobicha);
   transform: scale(1.9);
 }
 
-a.wrapper-full-star:hover, a.wrapper-half-star:hover {
+a.wrapper-full-star:hover,
+a.wrapper-half-star:hover {
   background: none;
   filter: drop-shadow(0px 0px 1rem rgba(0, 0, 0, 0.5))
     drop-shadow(1px 10px 20px rgba(255, 0, 0, 0.8));
 }
 
-.left{
+.left {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 1) 50%,
@@ -425,14 +404,13 @@ a.wrapper-full-star:hover, a.wrapper-half-star:hover {
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 50%);
 }
 
-.right{
+.right {
   -webkit-mask-image: linear-gradient(
     to left,
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, transparent 50%);
-
 }
 
 @media only screen and (max-width: 700px) {

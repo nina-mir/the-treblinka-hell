@@ -25,14 +25,18 @@ The Germans called the operation of transporting Jewish Poles from Warsaw Ghetto
 Per an entry in Zofia Nałkowska’s diary dated 31 August 1942: The Grossaktion Warsaw had been underway for forty-one days. Close to 210,000 Jews had already been transported to Treblinka in that time.
 
 
-### Further Readings:
+### 📚Further Readings:
 
 - Wiernik, Jankiel. A Year in Treblinka: An Inmate Who Escaped Tells the Day-to
 day Facts of One Year of His Torturous Experience. American Representation 
 of the General Jewish Workers’ Union of Poland 1945.
+[available on the web](https://www.zchor.org/treblink/wiernik.htm)  
+
+##### A masterful, poetic translation of the same essay can be found in the The Road
+- Grossman, Vasily. The Road: Stories, Journalism, and Essays. Translated by Robert Chandler, Elizabeth Chandler, and Olga Mukovnikova, NYRB Classics, 2010 
 
 
-### How to Contribute:
+### 🆘 How to Contribute:
 - Open an issue and communicate your thuoghts! 💚
 
 
