@@ -421,17 +421,9 @@ a.wrapper-half-star:hover {
   font-size: 1rem;
   text-align: center;
   color: var(--dark-purple);
-  
-  /* border-radius: 1px; */
 }
 
-.right-symbol{
-  /* box-shadow: 1px 0 var(--bronze); */
-} 
 
-.left-symbol{
-  /* box-shadow: -1px 0 var(--bronze); */
-}
 
 
 @media only screen and (max-width: 700px) {
