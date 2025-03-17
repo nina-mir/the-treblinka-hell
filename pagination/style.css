@@ -333,6 +333,7 @@ nav {
   font-family: bennet-text-four, sans-serif;
   font-size: 1.5rem;
   color: var(--dark-purple);
+  height: fit-content;
 }
 
 .pagination a[aria-current="page"]:hover {
@@ -423,7 +424,15 @@ a.wrapper-half-star:hover {
   color: var(--dark-purple);
 }
 
+/* Enables view transitions */
+@view-transition {
+  navigation: auto;
+}
 
+/* transition time  */
+::view-transition-group(root) {
+  animation-duration: 1s;
+}
 
 
 @media only screen and (max-width: 700px) {
